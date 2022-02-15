@@ -2,8 +2,9 @@
   "name": "desafio-ebytr",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/api/server.js",
   "scripts": {
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/danielotx/Desafio-Ebytr/issues"
   },
-  "homepage": "https://github.com/danielotx/Desafio-Ebytr#readme"
+  "homepage": "https://github.com/danielotx/Desafio-Ebytr#readme",
+  "dependencies": {
+  "express": "^4.17.2",
+  "mongodb": "^4.3.1",
+  "path": "^0.12.7"
+  }
 }
