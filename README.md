@@ -3,9 +3,9 @@
    CRUD MERN
 
      Requisitos:
-       -Node.js
-       -Javascript ES6
-       -MongoDB
+      -Node.js
+      -Javascript ES6
+      -MongoDB
   
   
   
@@ -13,10 +13,10 @@
  
 
     Após clonar o repositorio, acesse ./client, execute o comando:
-       -> npm install
+      -> npm install
 
     Retorne para a raiz(./) do projeto, execute o comando:
-       -> npm install
+      -> npm install
 
     Continuando na raiz do projeto(./), execute a aplicação com o comando:
-       -> npm start
+      -> npm start
