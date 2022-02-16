@@ -1,11 +1,11 @@
 const { ObjectId } = require('mongodb');
 const connect = require('./connection');
 
-const create = async (name, taskStatus) => {
+const create = async (name, status) => {
   const conn = await connect();
   const task = await conn
-    .collection('tasks').insertOne({ name, taskStatus });
-  return { name, taskStatus };
+    .collection('tasks').insertOne({ name, status });
+  return { name, status };
 };
 
 const find = async () => {
