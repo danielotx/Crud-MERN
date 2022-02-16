@@ -4,7 +4,6 @@
 
      Requisitos:
       -Node.js
-      -Javascript ES6
       -MongoDB
   
   
