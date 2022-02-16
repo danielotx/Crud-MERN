@@ -9,7 +9,7 @@
   
   
   
- Executando o projeto:
+ Instalando e executando o projeto:
  
 
     Após clonar o repositorio, acesse ./client, execute o comando:
