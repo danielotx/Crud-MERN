@@ -1,10 +1,12 @@
 const express = require('express');
-const path = require('path');
+const routes = require('../route/tasks.route');
 
 const app = express();
 app.use(express.json());
 
-app.get('/', (request, response) => {
+app.use('/', routes);
+
+app.get('/', (_request, response) => {
   response.send();
 });
 
