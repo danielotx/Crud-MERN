@@ -2,7 +2,6 @@ const { newTask, findAll, updateTask, removeTask } = require('../service/tasks.s
 
 const create = async (req, res) => {
   const { name, status } = req.body;
-  console.log(name, status);
   const createTask = await newTask(name, status);
   return res.status(201).json(createTask);
 }
