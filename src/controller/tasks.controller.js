@@ -13,14 +13,13 @@ const find = async (_req, res) => {
 };
 
 const update = async (req, res) => {
-  const { _id } = req.params;
-  const updated = await updateTask(_id, req.body);
+  const updated = await updateTask(req.params, req.body);
   return res.status(200).json(updated);
 };
 
 const remove = async (req, res) => {
-  const { _id } = req.params;
-  const removing = await removeTask(_id);
+  const { id } = req.params;
+  const removing = await removeTask(id);
   return res.status(204).json(removing);
 };
 
