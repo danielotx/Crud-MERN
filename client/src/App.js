@@ -45,7 +45,7 @@ useEffect(() => {
           <td>{status}</td>
           <td>{createdAt}</td>
           <td>
-            <button type='button' onClick={() => update(_id) }>
+            <button type='button' onClick={() => update(_id, {task, status}) }>
               Editar
             </button> 
             <button type='button' onClick={() => remove(_id)}>
