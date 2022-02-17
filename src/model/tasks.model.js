@@ -13,13 +13,13 @@ const find = async () => {
   return tasks;
 };
 
-const update = async (id, task, status) => {
+const update = async (id, name, status) => {
   if (!ObjectId.isValid(id)) return false;
   const conn = await connect();
   await conn.collection('tasks').updateOne(
-  { _id: ObjectId(id) }, { $set: { name: task, status } },
+  { _id: ObjectId(id) }, { $set: { name, status } },
   );
-  return { name: task, status };
+  return { name, status };
 };
 
 const remove = async (id) => {

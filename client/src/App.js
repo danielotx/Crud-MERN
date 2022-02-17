@@ -3,8 +3,8 @@ import { create, findAll, update, remove } from './utils/axiosService';
 
 function App() {
   const [tasks, setTasks] = useState([]);
-  const [task, setTask] = useState("");
-  const [status, setStatus] = useState('pendente');
+  const [task, setTask] = useState();
+  const [statusState, setStatus] = useState("Pendente");
 
 useEffect(() => {
   const getTasks = async () => {
@@ -25,12 +25,12 @@ useEffect(() => {
       value={task}>
     </input>
     <select onChange={ (event) => setStatus(event.target.value)}>
-      <option value='pendente'>Pendente</option>
-      <option value='em andamento'>Em andamento</option>
-      <option value='pronto'>Pronto</option>
+      <option value='Pendente'>Pendente</option>
+      <option value='Em andamento'>Em andamento</option>
+      <option value='Pronto'>Pronto</option>
 
     </select>
-      <button onClick={() => create({ task, status })}>Add</button>
+      <button onClick={() => create({ task, status: statusState })}>Add</button>
     </div>
     <div>
       <table>
@@ -45,7 +45,9 @@ useEffect(() => {
           <td>{status}</td>
           <td>{createdAt}</td>
           <td>
-            <button type='button' onClick={() => update(_id, {task, status}) }>
+            <button 
+              type='button' 
+              onClick={() => update(_id, { task, status: statusState }) }>
               Editar
             </button> 
             <button type='button' onClick={() => remove(_id)}>
