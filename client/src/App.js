@@ -19,8 +19,7 @@ useEffect(() => {
     <div>
     <input 
       type='task' 
-      name='task'
-      label='task' 
+      name='task' 
       onChange={ (event) => setTask(event.target.value)}
       value={task}>
     </input>
