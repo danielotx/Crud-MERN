@@ -3,8 +3,7 @@ const connect = require('./connection');
 
 const create = async (name, status) => {
   const conn = await connect();
-  const task = await conn
-    .collection('tasks').insertOne({ name, status });
+  await conn.collection('tasks').insertOne({ name, status, createdAt: new Date() });
   return { name, status };
 };
 
