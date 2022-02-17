@@ -12,7 +12,8 @@ const find = async (_req, res) => {
 };
 
 const update = async (req, res) => {
-  const updated = await updateTask(req.params, req.body);
+  const { task, status } = req.body
+  const updated = await updateTask(req.params, task, status);
   return res.status(200).json(updated);
 };
 

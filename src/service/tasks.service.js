@@ -10,8 +10,8 @@ const findAll = async () => {
   return findTasks;
 }
 
-const updateTask = async (id, body) => {
-  const updatedTask = await update(id, body)
+const updateTask = async (id, task, status) => {
+  const updatedTask = await update(id, task, status)
   return updatedTask;
 };
 
