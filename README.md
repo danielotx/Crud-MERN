@@ -1,5 +1,3 @@
-# Desafio-Ebytr
-
    CRUD MERN
 
      Requisitos:
